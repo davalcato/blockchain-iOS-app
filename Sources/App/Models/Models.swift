@@ -15,6 +15,16 @@ final class BlockchainNode :Content {
     init(address :String) {
         self.address = address
     }
+    
+}
+
+final class BlockchainNode :Content {
+    
+    var address :String
+    
+    init(address :String) {
+        self.address = address
+    }
 }
 
 final class Transaction : Content {
