@@ -30,11 +30,11 @@ class BlockchainController {
 //       return self.blockchainService.getNextBlock(transactions :[transaction])
 //
 //    }
-//
-//    func getBlockchain(req :Request) -> Blockchain {
-//        return self.blockchainService.getBlockchain()
-//
-//    }
+
+    func getBlockchain(req :Request) -> Blockchain {
+        return self.blockchainService.getBlockchain()
+
+    }
     
     func greet(req :Request) -> Future<String> {
         

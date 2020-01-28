@@ -15,12 +15,12 @@ class BlockchainService {
         self.blockchain = Blockchain(genesisBlock: Block())
 
     }
-//
-//    func getNodes() -> [BlockchainNode] {
-//        return self.blockchain.nodes
-//
-//    }
-//
+
+    func getNodes() -> [BlockchainNode] {
+        return self.blockchain.nodes
+
+    }
+
 //    func registerNodes(nodes :[BlockchainNode]) -> [BlockchainNode] {
 //        return self.blockchain.registerNodes(nodes: nodes)
 //
@@ -33,10 +33,10 @@ class BlockchainService {
 //        return block
 //    }
 //
-//    func getBlockchain() -> Blockchain {
-//        return self.blockchain
+    func getBlockchain() -> Blockchain {
+        return self.blockchain
         
-        
+        }
     }
 
 
