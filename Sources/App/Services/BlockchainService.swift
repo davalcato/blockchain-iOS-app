@@ -21,10 +21,10 @@ class BlockchainService {
 
     }
 
-//    func registerNodes(nodes :[BlockchainNode]) -> [BlockchainNode] {
-//        return self.blockchain.registerNodes(nodes: nodes)
-//
-//    }
+    func registerNodes(nodes :[BlockchainNode]) -> [BlockchainNode] {
+        return self.blockchain.registerNodes(nodes: nodes)
+
+    }
 
     func getNextBlock(transactions : [Transaction]) -> Block {
 

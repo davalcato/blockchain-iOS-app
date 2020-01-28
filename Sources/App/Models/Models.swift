@@ -8,15 +8,6 @@
 import Cocoa
 import Vapor
 
-final class BlockchainNode :Content {
-    
-    var address :String
-    
-    init(address :String) {
-        self.address = address
-    }
-    
-}
 
 final class BlockchainNode :Content {
     

@@ -15,16 +15,16 @@ class BlockchainController {
     init() {
         self.blockchainService = BlockchainService()
     }
-//
-//    func getNodes(req :Request) -> [BlockchainNode] {
-//        return self.blockchainService.getNodes()
-//
-//    }
-//
-//    func registerNodes(req :Request, nodes :[BlockchainNode]) -> [BlockchainNode] {
-//        return self.blockchainService.registerNodes(nodes :nodes)
-//
-//    }
+
+    func getNodes(req :Request) -> [BlockchainNode] {
+        return self.blockchainService.getNodes()
+
+    }
+
+    func registerNodes(req :Request, nodes :[BlockchainNode]) -> [BlockchainNode] {
+        return self.blockchainService.registerNodes(nodes :nodes)
+
+    }
 
     func mine(req :Request, transaction :Transaction) -> Block {
        return self.blockchainService.getNextBlock(transactions :[transaction])
