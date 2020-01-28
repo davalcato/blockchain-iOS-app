@@ -25,11 +25,11 @@ class BlockchainController {
 //        return self.blockchainService.registerNodes(nodes :nodes)
 //
 //    }
-//
-//    func mine(req :Request, transaction :Transaction) -> Block {
-//       return self.blockchainService.getNextBlock(transactions :[transaction])
-//
-//    }
+
+    func mine(req :Request, transaction :Transaction) -> Block {
+       return self.blockchainService.getNextBlock(transactions :[transaction])
+
+    }
 
     func getBlockchain(req :Request) -> Blockchain {
         return self.blockchainService.getBlockchain()

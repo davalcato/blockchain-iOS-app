@@ -25,14 +25,14 @@ class BlockchainService {
 //        return self.blockchain.registerNodes(nodes: nodes)
 //
 //    }
-//
-//    func getNextBlock(transactions : [Transaction]) -> Block {
-//
-//        let block = self.blockchain.getNextBlock(transactions: transactions)
-//        self.blockchain.addBlock(block)
-//        return block
-//    }
-//
+
+    func getNextBlock(transactions : [Transaction]) -> Block {
+
+        let block = self.blockchain.getNextBlock(transactions: transactions)
+        self.blockchain.addBlock(block)
+        return block
+    }
+
     func getBlockchain() -> Blockchain {
         return self.blockchain
         
