@@ -10,11 +10,11 @@ import Vapor
 
 class BlockchainController {
     
-//    private (set) var blockchainService :BlockchainService!
-//
-//    init() {
-//        self.blockchainService = BlockchainService()
-//    }
+    private (set) var blockchainService :BlockchainService!
+
+    init() {
+        self.blockchainService = BlockchainService()
+    }
 //
 //    func getNodes(req :Request) -> [BlockchainNode] {
 //        return self.blockchainService.getNodes()
