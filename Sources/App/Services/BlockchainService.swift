@@ -20,6 +20,17 @@ class BlockchainService {
         
         let nodes = self.blockchain.nodes
         
+        // Iterating thru the nodes
+        for nodes in nodes {
+            
+            let url = URL(string :"\(node.address)/blockchain")!
+            
+            URLSession.shared.dataTask(with: url) {
+                
+                
+            }
+        }
+        
     }
 
     func getNodes() -> [BlockchainNode] {
