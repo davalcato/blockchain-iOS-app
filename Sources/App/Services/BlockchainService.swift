@@ -15,6 +15,12 @@ class BlockchainService {
         self.blockchain = Blockchain(genesisBlock: Block())
 
     }
+    
+    func resolve(completion : @escaping (Blockchain) -> ()) {
+        
+        let nodes = self.blockchain.nodes
+        
+    }
 
     func getNodes() -> [BlockchainNode] {
         return self.blockchain.nodes
