@@ -21,14 +21,29 @@ class BlockchainService {
         let nodes = self.blockchain.nodes
         
         // Iterating thru the nodes
-        for nodes in nodes {
+        for node in nodes {
             
             let url = URL(string :"\(node.address)/blockchain")!
             
-            URLSession.shared.dataTask(with: url) {
+            URLSession.shared.dataTask(with: url) { data, _, _ in
                 
+                if let data = data {
+                    
+                    let blockchain = try! JSONDecoder().decode(Blockchain.self, from: data)
+                    
+                    if self.blockchain.blocks.count > blockchain.blocks.count {
+                        completion(self.blockchain)
+                        
+                    } else {
+                        self.blockchain = blockchain
+                        completion(blockchain)
+                        
+                        
+                    }
+                    
+                }
                 
-            }
+            }.resume()
         }
         
     }
