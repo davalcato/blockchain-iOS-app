@@ -9,4 +9,6 @@ public func routes(_ router: Router) throws {
     router.post(Transaction.self, at: "mine", use: blockchainController.mine)
     router.post([BlockchainNode].self, at: "/nodes/register", use: blockchainController.registerNodes)
     router.get("/nodes", use :blockchainController.getNodes)
+    router.get("/resolve", use:blockchainController.resolve)
+    
 }
