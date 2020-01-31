@@ -15,6 +15,18 @@ class BlockchainController {
     init() {
         self.blockchainService = BlockchainService()
     }
+    
+    func resolve(req :Request) -> Future<Blockchain> {
+        
+        // Inside our service call this a async request / wait for it to return
+        let promise :EventLoopPromise<Blockchain> = req.eventLoop.newPromise()
+        blockchainService.resolve {
+            promise.succeed(result: $0)
+            
+        }
+        
+        return promise.futureResult
+    }
 
     func getNodes(req :Request) -> [BlockchainNode] {
         return self.blockchainService.getNodes()
